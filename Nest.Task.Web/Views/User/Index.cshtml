@@ -1,0 +1,86 @@
+﻿@model Nest.Task.Model.UserView 
+<div id="search-results" class="col-md-12" style="margin-top: 30px;">
+    <div class="row block">
+        <div class="userHeader">
+            User Details 
+        </div>
+        <div class="col-md-12 cell">
+            <div class="table">
+                <div class="row_odd">
+                    <div class="cell_1 cell_1f">Name</div>
+                    <div class="cell_2 cell_2f">:</div>
+                    <div class="cell_3 cell_3f capitalize albumName" style="cursor:pointer">
+                        @Model.UserData.Name
+                    </div>
+                </div>
+                <div class="row_even">
+                    <div class="cell_1">Website</div>
+                    <div class="cell_2">:</div>
+                    <div class="cell_3">@Model.UserData.Website</div>
+                </div>
+                <div class="row_odd">
+                    <div class="cell_1">Email</div>
+                    <div class="cell_2">:</div>
+                    <div class="cell_3">@Model.UserData.Email</div>
+                </div>
+                <div class="row_even">
+                    <div class="cell_1">Phone</div>
+                    <div class="cell_2">:</div>
+                    <div class="cell_3">@Model.UserData.Phone</div>
+                </div>
+                <div class="row_odd">
+                    <div class="cell_1">Address</div>
+                    <div class="cell_2">:</div>
+                    <div class="cell_3">
+                        @Model.UserData.Address.Street <br />
+                        @Model.UserData.Address.Suite <br />
+                        @Model.UserData.Address.City <br />
+                        @Model.UserData.Address.Zipcode <br />
+                    </div>
+                </div>
+                <div class="row_even">
+                    <div class="cell_1">Company Name</div>
+                    <div class="cell_2">:</div>
+                    <div class="cell_3">@Model.UserData.Company.Name</div>
+                </div>
+                <div class="row_odd">
+                    <div class="cell_1">Catch Phrase</div>
+                    <div class="cell_2">:</div>
+                    <div class="cell_3">@Model.UserData.Company.CatchPhrase</div>
+                </div>
+                <div class="row_even">
+                    <div class="cell_1">Bs</div>
+                    <div class="cell_2">:</div>
+                    <div class="cell_3">@Model.UserData.Company.Bs</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="postHeader">
+            Posts
+        </div>
+        <div style="max-height:400px;overflow-y:auto;" class="col-md-12">
+            @foreach (var post in Model.Posts)
+            {
+                <div class="head">@post.Title <div class="icns"><span class="tipt"></span></div></div>
+                <div class="table">
+                    <div class="row" >
+                       
+
+                        <div class="col-md-10 cell">
+                            <div class="table">
+                             
+                                @post.Body
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+        </div>
+    </div>
+
+</div>
+

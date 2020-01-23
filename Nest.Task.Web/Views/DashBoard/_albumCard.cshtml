@@ -1,0 +1,85 @@
+﻿@model Nest.Task.Model.AlbumView
+    @{int picCount = 0;}
+<div class="block">
+    <div class="head">@Model.Title <div class="icns"><span class="tipt" ></span></div></div>
+    <div class="table">
+        <div class="row parCard" id="divGalleries">
+            <div class="col-md-4 cell-left">
+                <div id="gal-83541" class="profile_img show_prof_gal" style="text-align: center;margin-top: 20px;" data-count="3">
+                    <img src="@Model.ThumbNail" alt="">										<div class="caption">
+                        <span class="count">@Model.Photo.Count()</span> <span class="fleft"> &nbsp;Photos in Gallery</span>											<div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear10"></div>
+            </div>
+
+            <div class="col-md-8 cell">
+                <div class="table">
+                    <div class="row_odd">
+                        <div class="cell_1 cell_1f">Name</div>
+                        <div class="cell_2 cell_2f">:</div>
+                        <div class="cell_3 cell_3f capitalize albumName" style="cursor:pointer">
+                            <a href="@Url.Action("Index", "User",new { id=Model.UserId})" class="elements"><span> @Model.Name</span></a>
+                        </div>
+                    </div>
+                    <div class="row_even">
+                        <div class="cell_1">Title</div>
+                        <div class="cell_2">:</div>
+                        <div class="cell_3 albumTitle" style="cursor:pointer" >@Model.Title</div>
+                    </div>
+                    <div class="row_odd">
+                        <div class="cell_1">Email</div>
+                        <div class="cell_2">:</div>
+                        <div class="cell_3">@Model.Email</div>
+                    </div>
+                    <div class="row_even">
+                        <div class="cell_1">Phone</div>
+                        <div class="cell_2">:</div>
+                        <div class="cell_3">@Model.Phone</div>
+                    </div>
+                    <div class="row_odd">
+                        <div class="cell_1">Address</div>
+                        <div class="cell_2">:</div>
+                        <div class="cell_3">
+                            @Model.Address.Street <br />
+                            @Model.Address.Suite <br />
+                            @Model.Address.City <br />
+                            @Model.Address.Zipcode <br />
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="divPhotos" style="display:none">
+                <div class="gallery">
+                    <div class="row">
+                        <div class="col-md-3 thumbs">
+                            <div style="overflow:auto;height:100%;width:100%">
+                                @foreach (var photo in Model.Photo)
+                                {
+                                    picCount++;
+                                    if (picCount == 1)
+                                    {
+                                        <div class="thumb active" data-image="@photo.Url"><img class="thumbImage" src="@photo.ThumbnailUrl" alt=""></div>
+                                    }
+                                    else
+                                    {
+                                        <div class="thumb" data-image="@photo.Url"><img class="thumbImage" src="@photo.ThumbnailUrl" alt=""></div>
+                                    }
+                                    <label>@photo.Title</label>
+                                };
+                            </div>
+                           
+                        </div>
+                        <div class="col-md-9 realPic" style="padding: 25px;">
+                            <img src="@Model.Photo[0].Url" style="max-width: 500px;max-height: 500px;" />
+
+                        </div>
+                    </div>
+                  
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+﻿@model Nest.Task.Model.AlbumViews
+<div class="top_head">
+    @{int ddCount = Model.ItemCount / 10;
+        int startIndex = ((Model.SelectedPage-1) * 10) + 1;
+        int endIndex = Model.SelectedPage * 10;}
+    <div id="divResultCount" class="left">
+        @if (Model.ItemCount == 0)
+        {
+            @: No Results
+        }
+        else
+        {
+            @:Search Results @startIndex to @endIndex of @Model.ItemCount
+        }
+
+    </div>
+    <div class="paginatio right">
+
+        <span class="page">
+            Page
+            <select class="page_num">
+                @for (int count = 1; count <= Model.ItemCount / 10; count++)
+                {
+                    if (count == Model.SelectedPage)
+                    {
+                        <option value="@count" selected="selected">@count</option>
+                    }
+                    else
+                    {
+                        <option value="@count">@count</option>
+                    }
+
+                }
+
+            </select>
+
+            of @ddCount
+        </span>
+        <div class="clear"></div>
+    </div>
+</div>
+
+
+
+
+<div id="search-results">
+    @foreach (var album in Model.Albums)
+    {
+        @Html.Partial("_albumCard", album);
+        <br />
+    }
+
+</div>
+
+

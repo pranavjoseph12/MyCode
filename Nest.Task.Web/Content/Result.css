@@ -1,0 +1,457 @@
+﻿body {
+}
+.spinner {
+    margin: 100px auto;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 10px;
+}
+
+    .spinner > div {
+        background-color: #333;
+        height: 100%;
+        width: 6px;
+        display: inline-block;
+        -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+        animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    }
+
+    .spinner .rect2 {
+        -webkit-animation-delay: -1.1s;
+        animation-delay: -1.1s;
+    }
+
+    .spinner .rect3 {
+        -webkit-animation-delay: -1.0s;
+        animation-delay: -1.0s;
+    }
+
+    .spinner .rect4 {
+        -webkit-animation-delay: -0.9s;
+        animation-delay: -0.9s;
+    }
+
+    .spinner .rect5 {
+        -webkit-animation-delay: -0.8s;
+        animation-delay: -0.8s;
+    }
+
+@-webkit-keyframes sk-stretchdelay {
+    0%, 40%, 100% {
+        -webkit-transform: scaleY(0.4)
+    }
+
+    20% {
+        -webkit-transform: scaleY(1.0)
+    }
+}
+
+@keyframes sk-stretchdelay {
+    0%, 40%, 100% {
+        transform: scaleY(0.4);
+        -webkit-transform: scaleY(0.4);
+    }
+
+    20% {
+        transform: scaleY(1.0);
+        -webkit-transform: scaleY(1.0);
+    }
+}
+#search-right {
+    width: 740px;
+    border: 0 solid #00F;
+    float: right
+}
+.postHeader {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 20px;
+    background-color: #ff9999;
+}
+.userHeader {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 20px;
+    background-color: #ff9999;
+}
+.gallery .thumbs div.active {
+    border: 1px solid #000;
+}
+.gallery .thumbs div{
+    margin: 5px 0;
+    width: 86px;
+    height: 105px;
+}
+.thumbImage {
+    margin: 5px 0;
+    width: 84px;
+    height: 94px;
+}
+.modal-lg{
+    width:900px;
+}
+.thumbs {
+    border-right: 1px solid #CCC;
+    height: 530px;
+    padding: 20px 10px;
+    vertical-align: top;
+}
+
+.gallery {
+    border: 1px solid #CCC;
+    margin: 20px;
+    padding: 15px;
+}
+#search-main .top_head {
+    background: #33c9ff;
+    color: #FFF;
+    padding: 3px 10px;
+    height: 28px;
+    margin-bottom: 25px
+}
+
+#search-main .top_head .left {
+    float: left;
+    padding-top: 5px;
+    font-size: 14px;
+    font-weight: 700
+}
+
+#search-main .top_head .right {
+    float: right;
+    font-size: 14px
+}
+
+.paginatio a {
+    text-decoration: none
+}
+
+#profile .top .info .right_links .add_favourites:hover,
+#profile .top .info .right_links .email-my-profile:hover,
+#profile .top .info .right_links .email_profile:hover,
+#profile .top .info .right_links .print:hover {
+    text-decoration: underline
+}
+
+.paginatio .page_first,
+.paginatio .page_prev {
+    display: block;
+    float: left;
+    padding: 6px 5px 6px 0
+}
+
+.paginatio .page {
+    display: block;
+    float: left
+}
+
+    .paginatio .page select {
+        width: 65px;
+        height: 28px;
+        color: #555;
+        font-size: 14px;
+        background: url(../images/select_70.png) left top no-repeat;
+        border: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: .01px;
+        text-overflow: '';
+        padding: 5px;
+        line-height: 16px
+    }
+
+        .paginatio .page select option {
+            background: #FFF
+        }
+
+.paginatio .page_last,
+.paginatio .page_next {
+    display: block;
+    float: left;
+    padding: 6px 0 6px 5px
+}
+#search-results .block .head .icns img {
+    vertical-align: middle
+}
+#search-results .block .buttons {
+    margin: 15px 0
+}
+    #search-results .block .buttons input {
+        border: 1px solid #00AFEF;
+        background: #00AFEF;
+        color: #FFF;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 700;
+        padding: 2px 8px;
+        font-size: 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 5px
+    }
+
+#search-results .block .head .icns {
+    display: inline-block;
+    margin-left: 20px
+}
+
+    #search-results .block .head .icns img {
+        cursor: pointer
+    }
+
+#search-results .block .buttons input:hover {
+    text-shadow: 1px 0 #ccc
+}
+
+#search-results .block {
+    border: 1px solid #efc6b8;
+    margin-bottom: 20px
+}
+
+    #search-results .block .head {
+        background: #efc6b8;
+        padding: 3px 10px;
+        font-weight: 700;
+        position: relative
+    }
+
+        #profile .info .blockinfo,
+        #search-results .block .head .blockinfo {
+            display: none;
+            width: auto;
+            background: #FFF;
+            padding: 5px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 22px;
+            box-shadow: 1px 1px 4px #888;
+            transform: rotate(-5deg);
+            border: 1px solid #efc6b8;
+            color: #333
+        }
+
+        #search-results .block .head .blockinfo_icon {
+            position: absolute;
+            right: 10px;
+            top: 7px;
+            cursor: pointer
+        }
+
+#profile .info .blockinfo_icon {
+    position: absolute;
+    cursor: pointer;
+    margin-top: 4px
+}
+
+#search-results .block .head .blockinfo {
+    position: absolute;
+    right: 8px;
+    top: 26px
+}
+
+#profile .info .blockinfo {
+    position: absolute;
+    right: 5px;
+    top: 24px;
+    white-space: nowrap
+}
+
+#search-results .block .cell {
+    vertical-align: top
+}
+
+#search-results .block .left {
+    width: 127px;
+    padding: 15px
+}
+
+    #search-results .block .left .profile_img {
+        border: 1px solid #CCC;
+        padding: 3px;
+        width: 120px;
+        height: auto
+    }
+
+        #search-results .block .left .profile_img img {
+            width: 120px;
+            height: 135px
+        }
+
+#search-results .block .bottom_links a.send_message,
+#search-results .block .bottom_links a.view_profile,
+#search-results .block .bottom_links a.viewed_profile,
+#search-results .block .bottom_links span.email_profile,
+#search-results .block .bottom_links span.photo_match {
+    padding-left: 25px;
+    font-size: 13px;
+    color: #09F;
+    cursor: pointer;
+    height: 20px;
+    text-decoration: none
+}
+
+#search-results .block .left .bottom_links {
+    margin: 8px
+}
+
+#search-results .block .bottom_links {
+    margin: 15px 0
+}
+
+    #search-results .block .bottom_links span.photo_match {
+        background: url(../images/icons/People.png) 5px 0 no-repeat;
+        width: 85px
+    }
+
+    #search-results .block .bottom_links a.view_profile,
+    #search-results .block .bottom_links a.viewed_profile {
+        display: block;
+        float: left;
+        background: url(../images/icons/Boss.png) 5px 0 no-repeat;
+        width: 80px;
+        margin-right: 4px
+    }
+
+    #search-results .block .bottom_links a.send_message {
+        display: block;
+        float: left;
+        background: url(../images/icons/Mail.png) 5px 0 no-repeat;
+        width: 110px;
+        margin-right: 4px
+    }
+
+    #search-results .block .bottom_links span.add_favourites,
+    #search-results .block .bottom_links span.remove_favourites {
+        display: block;
+        float: left;
+        background: url(../images/icons/Favourites.png) 5px 0 no-repeat;
+        padding-left: 25px;
+        font-size: 13px;
+        color: #09F;
+        cursor: pointer;
+        width: 120px;
+        height: 20px;
+        margin-right: 4px;
+        text-decoration: none
+    }
+
+    #search-results .block .bottom_links span.remove_favourites {
+        width: 125px
+    }
+
+    #search-results .block .bottom_links span.email_profile {
+        display: block;
+        float: left;
+        background: url(../images/icons/Mail.png) 5px 0 no-repeat;
+        width: 115px
+    }
+
+    #search-results .block .bottom_links a:hover,
+    #search-results .block .bottom_links span:hover {
+        font-size: 14px !important;
+        text-shadow: 1px 2px #CCC
+    }
+
+#search-results .block .left p {
+    font-size: 11px;
+    text-align: center
+}
+
+#search-results .block .table {
+    display: table
+}
+
+    #search-results .block .table .row_odd {
+        display: table-row
+    }
+
+    #search-results .block .table .row_even {
+        display: table-row;
+        background: #F2F2F2
+    }
+
+    #search-results .block .table .cell_1 {
+        display: table-cell;
+        width: 140px;
+        font-weight: 700;
+        padding: 4px 5px 5px 10px;
+        border-left: 1px solid #F2F2F2
+    }
+
+    #search-results .block .table .cell_2 {
+        display: table-cell;
+        width: 10px;
+        font-weight: 700;
+        padding: 4px 5px 5px
+    }
+
+    #search-results .block .table .cell_3 {
+        display: table-cell;
+        padding: 4px 5px 5px;
+        width: 395px
+    }
+
+    #search-results .block .table .cell_1f,
+    #search-results .block .table .cell_2f,
+    #search-results .block .table .cell_3f {
+        padding-top: 10px;
+        font-weight: 700
+    }
+#search-left .view_search {
+    border: 1px solid #d4c09d
+}
+
+#search-left .view_search .head {
+    background: #efc6b8 !important;
+    filter: none
+}
+.paginatio .page select {
+    width: 65px;
+    height: 28px;
+    color: #555;
+    font-size: 14px;
+    background: url(../images/select_70.png) left top no-repeat;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: .01px;
+    text-overflow: '';
+    padding: 5px;
+    line-height: 16px;
+    overflow: visible !important;
+}
+    #search-left .view_search .form {
+    padding: 10px;
+    border: 5px solid #efc6b8;
+    border-top: none;
+}
+
+#search-left .view_search .form input[type=text] {
+    padding: 5px;
+    width: 100px;
+    font-size: 13px;
+    border-radius: 0;
+    border: 1px solid #CCC
+}
+
+        #search-left .view_search .form input[type=submit] {
+            padding: 4px 8px;
+            border-radius: 0;
+            border: 0
+        }
+
+#search-left {
+    width: 245px;
+    float: left
+}
+
+    #search-left .head {
+        background-color: #F0F0F0;
+        background: -moz-linear-gradient(center top, #fff, #eee);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(.1, #fff), color-stop(.9, #eee));
+        background: -ms-linear-gradient(top, #fff 0, #eee 100%);
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#EEEEEE', GradientType=0);
+        font-size: 14px;
+        font-weight: 700;
+        padding: 8px 10px
+    }
